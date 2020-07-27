@@ -1,4 +1,5 @@
 Important notes for use:
+- The Project was written in Java 8(1.8)
 - A "Main.java" file has been provided to take a input of a filename, this file name must end in ".txt" and have the relevant
   file path (E.g I have placed my test files in the "testFiles" folder so provided a input of "testFiles/testFile.txt")
 - If you want to use the WordCount class manually, instantiate a new instance of WordCount, providing the filename String with the same rules listed above
