@@ -1,0 +1,47 @@
+Important notes for use:
+- A "Main.java" file has been provided to take a input of a filename, this file name must end in ".txt" and have the relevant
+  file path (E.g I have placed my test files in the "testFiles" folder so provided a input of "testFiles/testFile.txt")
+- If you want to use the WordCount class manually, instantiate a new instance of WordCount, providing the filename String with the same rules listed above
+- This API has been written as to work with the English Language, for any other language, please adjust the "LONGEST_WORD" constant with the length of the longest word
+  from that language.
+
+Methodology:
+1. Confirm openable file exists and open file
+2. Loop through each line of the file, splitting the line on the " " regex to partition words into array
+3. For each 'word' in array:
+   1. Confirm it is not just a " "
+   2. Increment word count tally
+   3. Pass through function to calculate length of word
+   4. Increment corresponding value of lengths array with index equal the length of the word
+4. Find max value from array holding word length frequencies
+5. Loop through array holding word length frequencies, adding relevant string if the value is above 0
+   and adding word length to array holding lengths containing the max frequency
+6. Print output to screen
+
+Word Definition Rules:
+- Words are split by a " " regex
+- A single punctuation character (e.g "$" or "&") shall be defined as a 1 letter word
+- Any punctuation (e.g "." "," ";") as the last character of a word shall not be counted towards the length of that word 
+  (e.g "Hello." is a 5 letter word much like if it was simply "Hello")
+- Multiple " " gaps between words will not be counted as words, as explained before, the split uses " " as a regex and multiple
+  " " consecutively will be skipped over if found
+
+The function "getFrequency" is a function implemented purely for ease of use with the unit test suites
+
+File Breakdown:
+- .settings
+- bin
+  - .class files
+- src
+  - WordCount.java (Class containing main code)
+  - Main.java (Class providing main method to run programme)
+  - FrequencyTest.java (Junit test suite testing the word length frequencies are as expected)
+  - ProvidedExampleTest.java (Junit test suite testing the output for the provided example from word document matches)
+  - TotalWordTest.java (Junit test suite testing various sized files return the correct total number of words)
+  - WordLengthTest.java (Junit test suite testing the correct word length is returned for various Strings)
+- target
+- testFiles (Folder containing selection of different .txt files for testing purposes)
+- .classpath
+- .project
+- pom.xml
+- RULES&INFO(PLEASE READ FIRST)
